@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.hafizcode.moviesandtv.R
+import com.hafizcode.moviesandtv.databinding.ActivitySplashBinding
 import com.hafizcode.moviesandtv.ui.home.view.HomeActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -12,7 +13,9 @@ class SplashActivity : AppCompatActivity() {
     lateinit var handler: Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+
+        val activitySplashBinding = ActivitySplashBinding.inflate(layoutInflater)
+        setContentView(activitySplashBinding.root)
 
         handler = Handler()
         handler.postDelayed({
