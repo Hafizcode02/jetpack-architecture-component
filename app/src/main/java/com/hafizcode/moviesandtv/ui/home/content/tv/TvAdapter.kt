@@ -1,4 +1,4 @@
-package com.hafizcode.moviesandtv.ui.home.content.movie
+package com.hafizcode.moviesandtv.ui.home.content.tv
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,31 +11,18 @@ import com.hafizcode.moviesandtv.data.DataEntity
 import com.hafizcode.moviesandtv.databinding.ItemRowBinding
 import com.hafizcode.moviesandtv.ui.detail.DetailActivity
 
-class MovieAdapter(private val callback: MovieFragment) :
-    RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
+class TvAdapter(private val callback: TvFragment) :
+    RecyclerView.Adapter<TvAdapter.TvViewHolder>() {
 
-    private val listMovies = ArrayList<DataEntity>()
+    private val listTV = ArrayList<DataEntity>()
 
-    fun setMovies(movies: List<DataEntity>?) {
-        if (movies == null) return
-        this.listMovies.clear()
-        this.listMovies.addAll(movies)
+    fun setTV(tv: List<DataEntity>?) {
+        if (tv == null) return
+        listTV.clear()
+        listTV.addAll(tv)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        val itemRowBinding =
-            ItemRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return MovieViewHolder(itemRowBinding)
-    }
-
-    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        val movie = listMovies[position]
-        holder.bind(movie)
-    }
-
-    override fun getItemCount(): Int = listMovies.size
-
-    inner class MovieViewHolder(private val binding: ItemRowBinding) :
+    class TvViewHolder(private val binding: ItemRowBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: DataEntity) {
             with(binding) {
@@ -55,4 +42,16 @@ class MovieAdapter(private val callback: MovieFragment) :
         }
     }
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TvViewHolder {
+        val itemRowBinding =
+            ItemRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return TvViewHolder(itemRowBinding)
+    }
+
+    override fun onBindViewHolder(holder: TvViewHolder, position: Int) {
+        val tvs = listTV[position]
+        holder.bind(tvs)
+    }
+
+    override fun getItemCount(): Int = listTV.size
 }

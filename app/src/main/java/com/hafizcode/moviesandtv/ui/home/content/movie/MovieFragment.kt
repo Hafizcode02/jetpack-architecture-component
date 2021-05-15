@@ -1,15 +1,12 @@
 package com.hafizcode.moviesandtv.ui.home.content.movie
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.hafizcode.moviesandtv.R
 import com.hafizcode.moviesandtv.databinding.FragmentMovieBinding
 import com.hafizcode.moviesandtv.ui.home.content.helper.DataViewModel
 

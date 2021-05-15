@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.hafizcode.moviesandtv.R
 import com.hafizcode.moviesandtv.databinding.ActivitySplashBinding
 import com.hafizcode.moviesandtv.ui.home.view.HomeActivity
 
