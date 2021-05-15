@@ -10,6 +10,8 @@ data class DataEntity(
     var description: String,
     var genre: String,
     var releasedYear: String,
+    var ratingFor: String,
+    var ratingFilm: String,
+    var playedHour: String,
     var imgPoster: Int,
-    var imgBackground: Int
 ) : Parcelable
