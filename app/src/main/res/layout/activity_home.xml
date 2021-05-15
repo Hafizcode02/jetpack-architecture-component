@@ -28,7 +28,7 @@
 
             <ImageView
                 android:layout_width="250dp"
-                android:layout_height="40dp"
+                android:layout_height="28dp"
                 android:layout_gravity="center"
                 android:contentDescription="@string/logo_imdb"
                 android:src="@drawable/long_imdb" />
@@ -39,7 +39,7 @@
     <com.synnapps.carouselview.CarouselView
         android:id="@+id/carouselView"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="210dp"
         android:background="@color/white"
         app:indicatorVisibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,6 +48,18 @@
         app:layout_constraintTop_toBottomOf="@id/appBarLayout"
         app:layout_constraintVertical_bias="0.01"
         app:slideInterval="3000" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:contentDescription="@string/transparent_background"
+        android:src="@drawable/bg_item_black"
+        app:layout_constraintBottom_toBottomOf="@id/carouselView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/carouselView"
+        app:layout_constraintVertical_bias="0.353" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"

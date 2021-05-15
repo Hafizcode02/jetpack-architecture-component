@@ -5,4 +5,5 @@
     <string name="logo_imdb">Logo IMDB</string>
     <string name="film_tab">Movies</string>
     <string name="tv_tab">TV Show</string>
+    <string name="transparent_background">Transparent Background</string>
 </resources>
