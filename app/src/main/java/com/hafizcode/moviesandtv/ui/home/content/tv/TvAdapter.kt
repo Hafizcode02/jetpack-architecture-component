@@ -22,7 +22,7 @@ class TvAdapter(private val callback: TvFragment) :
         listTV.addAll(tv)
     }
 
-    class TvViewHolder(private val binding: ItemRowBinding) :
+    inner class TvViewHolder(private val binding: ItemRowBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: DataEntity) {
             with(binding) {
@@ -35,8 +35,7 @@ class TvAdapter(private val callback: TvFragment) :
                     )
                     .into(imgItemPhoto)
                 itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, DetailActivity::class.java)
-                    itemView.context.startActivity(intent)
+                    callback.onItemClicked(data)
                 }
             }
         }

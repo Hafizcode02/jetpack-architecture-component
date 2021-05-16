@@ -1,5 +1,6 @@
 package com.hafizcode.moviesandtv.ui.home.content.movie
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +8,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.hafizcode.moviesandtv.R
+import com.hafizcode.moviesandtv.data.DataEntity
 import com.hafizcode.moviesandtv.databinding.FragmentMovieBinding
+import com.hafizcode.moviesandtv.ui.detail.DetailActivity
+import com.hafizcode.moviesandtv.ui.home.content.helper.DataCallback
 import com.hafizcode.moviesandtv.ui.home.content.helper.DataViewModel
 
-class MovieFragment : Fragment() {
+class MovieFragment : Fragment(), DataCallback {
 
     private lateinit var fragmentMovieBinding: FragmentMovieBinding
 
@@ -42,6 +47,13 @@ class MovieFragment : Fragment() {
                 this.adapter = adapter
             }
         }
+    }
+
+    override fun onItemClicked(data: DataEntity) {
+        val intent = Intent(context, DetailActivity::class.java)
+        intent.putExtra(DetailActivity.DATA_ID, data.id)
+        intent.putExtra(DetailActivity.DATA_TYPE, R.string.type_movie)
+        startActivity(intent)
     }
 
 }

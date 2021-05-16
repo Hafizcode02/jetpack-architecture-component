@@ -48,8 +48,7 @@ class MovieAdapter(private val callback: MovieFragment) :
                     )
                     .into(imgItemPhoto)
                 itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, DetailActivity::class.java)
-                    itemView.context.startActivity(intent)
+                    callback.onItemClicked(data)
                 }
             }
         }
