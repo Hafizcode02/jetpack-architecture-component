@@ -51,7 +51,7 @@ class TvFragment : Fragment(), DataCallback {
     override fun onItemClicked(data: DataEntity) {
         val intent = Intent(context, DetailActivity::class.java)
         intent.putExtra(DetailActivity.DATA_ID, data.id)
-        intent.putExtra(DetailActivity.DATA_TYPE, R.string.type_tv)
+        intent.putExtra(DetailActivity.DATA_TYPE, R.string.type_tv.toString())
         startActivity(intent)
     }
 }
