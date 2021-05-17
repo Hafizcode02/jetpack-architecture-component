@@ -9,7 +9,7 @@ import com.hafizcode.moviesandtv.ui.home.view.HomeActivity
 
 class SplashActivity : AppCompatActivity() {
 
-    lateinit var handler: Handler
+    private lateinit var handler: Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

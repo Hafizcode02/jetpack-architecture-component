@@ -23,7 +23,7 @@ class TvFragment : Fragment(), DataCallback {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         fragmentTvBinding = FragmentTvBinding.inflate(layoutInflater, container, false)
         return fragmentTvBinding.root
     }

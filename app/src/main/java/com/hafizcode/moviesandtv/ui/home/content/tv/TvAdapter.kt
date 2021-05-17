@@ -1,6 +1,5 @@
 package com.hafizcode.moviesandtv.ui.home.content.tv
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +8,6 @@ import com.bumptech.glide.request.RequestOptions
 import com.hafizcode.moviesandtv.R
 import com.hafizcode.moviesandtv.data.DataEntity
 import com.hafizcode.moviesandtv.databinding.ItemRowBinding
-import com.hafizcode.moviesandtv.ui.detail.DetailActivity
 
 class TvAdapter(private val callback: TvFragment) :
     RecyclerView.Adapter<TvAdapter.TvViewHolder>() {

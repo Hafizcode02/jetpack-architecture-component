@@ -7,7 +7,7 @@ import com.hafizcode.moviesandtv.utils.DataDummy
 class DetailViewModel : ViewModel() {
     private lateinit var movieId: String
     private lateinit var tvId: String
-    lateinit var result: DataEntity
+    private lateinit var result: DataEntity
 
     private fun getListMovie(): ArrayList<DataEntity> =
         DataDummy.generateDummyMovies() as ArrayList<DataEntity>
