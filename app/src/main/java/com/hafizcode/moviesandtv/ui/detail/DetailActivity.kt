@@ -59,7 +59,8 @@ class DetailActivity : AppCompatActivity() {
         activityDetailBinding.textTitle.text = data.title
         activityDetailBinding.textRatingFilm.text = data.ratingFilm
         activityDetailBinding.textGenre.text = data.genre
-        activityDetailBinding.textRatingHour.text = """${data.ratingFor} / ${data.playedHour}"""
+        activityDetailBinding.textRatingHour.text =
+            getString(R.string.rating_hour, data.ratingFor, data.playedHour)
         activityDetailBinding.textDate.text = data.releasedYear
         activityDetailBinding.textDescription.text = data.description
     }
